@@ -7,11 +7,14 @@ import Navbar from "./Components/Navbar"
 import Projects from "./Components/Projects"
 import Skills from "./Components/Skills"
 import 'animate.css';
+import { Toaster } from 'react-hot-toast';
+
 function App() {
 
 
   return (
     <>
+    <Toaster position="top-center" reverseOrder={false} />
       <div className="min-h-screen bg-white dark:bg-gray-900">
         <Navbar></Navbar>
         <main >

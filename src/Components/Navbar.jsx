@@ -37,8 +37,8 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img className="w-8 h-8 mb-1 mr-2" src={portfolioIcon} alt="logo" />
-            <span className="text-2xl font-bold text-purple-800 dark:text-indigo-300
- hover:text-purple-900 align-middle">
+            <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-300
+ hover:text-indigo-400 align-middle">
               Portfolio
             </span>
           </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-200 hover:text-purple-700 dark:hover:text-orange-300 hover:bg-indigo-100 dark:hover:bg-gray-700 rounded-3xl px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-orange-300 hover:bg-indigo-100 dark:hover:bg-gray-700 rounded-3xl px-3 py-2 text-sm font-medium transition-colors"
               >
                 {item.name}
               </a>
