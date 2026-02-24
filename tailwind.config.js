@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class", // 🔥 REQUIRED IN V4
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
+
 

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(() => {
   const stored = localStorage.getItem("theme");
   if (stored) return stored === "dark"; // respect saved preference
-  return true; // default to dark if nothing is saved
+  return window.matchMedia("(prefers-color-scheme: dark)").matches; // default to dark if nothing is saved
 });
 
 

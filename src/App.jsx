@@ -12,9 +12,9 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen dark:bg-gray-900">
+      <div className="min-h-screen bg-white dark:bg-gray-900">
         <Navbar></Navbar>
-        <main>
+        <main >
           <Hero></Hero>
           <About></About>
           <Skills></Skills>
@@ -28,4 +28,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Github, Linkedin, Download, Facebook } from 'lucide-react';
-import image from '../assets/1000005139-removebg (1)-bv863erv.png'
+import image from '../assets/1000005139-removebg (1)-bv863erv.png';
 const Hero = () => {
   // typing effect
   const [showDeveloper, setShowDeveloper] = useState(false);
@@ -27,9 +27,10 @@ const Hero = () => {
   }, []);
 
   return (
+    <>
     <section id="home" className="pt-20 py-32 sm:py-42 bg-linear-to-br from-purple-400 to-orange-400 dark:from-indigo-800 via-slate-800 dark:to-purple-800
  transition">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 text-center md:text-left md:ml-13 lg:ml-24">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
@@ -84,6 +85,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 }
 
