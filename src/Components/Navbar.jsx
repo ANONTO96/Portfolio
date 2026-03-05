@@ -5,21 +5,21 @@ import portfolioIcon from "../assets/icons8-portfolio-48.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
-  const stored = localStorage.getItem("theme");
-  if (stored) return stored === "dark"; // respect saved preference
-  return window.matchMedia("(prefers-color-scheme: dark)").matches; // default to dark if nothing is saved
-});
+    const stored = localStorage.getItem("theme");
+    if (stored) return stored === "dark"; // respect saved preference
+    return window.matchMedia("(prefers-color-scheme: dark)").matches; // default to dark if nothing is saved
+  });
 
 
   useLayoutEffect(() => {
-  if (darkMode) {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
-}, [darkMode]);
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
 
 
   const navItems = [
@@ -37,9 +37,9 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img className="w-8 h-8 mb-1 mr-2" src={portfolioIcon} alt="logo" />
-            <span className="text-2xl font-bold text-indigo-700 dark:text-indigo-300
- hover:text-indigo-400 align-middle">
+            <img className="w-8 h-8 mb-1 mr-2 " src={portfolioIcon} alt="logo" />
+            <span className="text-2xl font-bold text-white
+ hover:text-indigo-300 align-middle">
               Portfolio
             </span>
           </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-orange-300 hover:bg-indigo-100 dark:hover:bg-gray-700 rounded-3xl px-3 py-2 text-sm font-medium transition-colors"
+                className="text-white/90 dark:text-gray-200 hover:text-indigo-700 dark:hover:text-orange-300 hover:bg-indigo-100 dark:hover:bg-gray-700 rounded-3xl px-3 py-2 text-sm font-medium transition-colors"
               >
                 {item.name}
               </a>
@@ -59,9 +59,9 @@ const Navbar = () => {
             {/* Dark Mode Toggle (Desktop) */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+              className="p-2 rounded-lg hover:bg-gray-600 transition"
             >
-              {darkMode ? <Sun size={20} className="text-yellow-500" /> : <Moon size={20} className="text-gray-800" />}
+              {darkMode ? <Sun size={20} className="text-yellow-500" /> : <Moon size={20} className="text-white" />}
             </button>
           </div>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 dark:text-gray-200 hover:text-purple-600"
+              className="text-white hover:text-indigo-300"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -85,7 +85,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-gray-700 dark:text-gray-200 font-medium hover:text-purple-700 dark:hover:text-orange-300 hover:bg-indigo-100 dark:hover:bg-gray-700 rounded-lg"
+                className="block px-3 py-2 text-white dark:text-gray-200 font-medium hover:text-indigo-700 dark:hover:text-orange-300 hover:bg-indigo-100 dark:hover:bg-gray-700 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -95,7 +95,7 @@ const Navbar = () => {
             {/* Dark Mode Toggle (Mobile) */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="w-full flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+              className="w-full flex justify-center items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
               {darkMode ? "Light Mode" : "Dark Mode"}

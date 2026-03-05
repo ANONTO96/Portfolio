@@ -43,7 +43,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Contact Me</h2>
-          <div className="mt-2 h-1 w-20 bg-indigo-500 mx-auto"></div>
+          <div className="mt-2 h-1 w-20 bg-indigo-700 dark:bg-indigo-500 mx-auto"></div>
         </div>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10">

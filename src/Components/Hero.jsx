@@ -28,7 +28,7 @@ const Hero = () => {
     toast(
       (t) => (
         <div className="flex flex-col gap-3 items-center px-3 py-6">
-          <span className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
+          <span className="font-semibold text-white mb-2">
             Download Options
           </span>
           <div className="flex gap-5">
@@ -81,12 +81,12 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-center md:text-left md:ml-13 lg:ml-24">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
                 <span className="animate__animated animate__bounceInUp animate__delay-1s">
                   MERN Stack
                 </span>
                 {showDeveloper && (
-                  <span className="block text-purple-700 dark:text-orange-300">
+                  <span className="block text-orange-300">
                     {text}
                     <span className="animate__animated animate__flash animate__infinite">
                       .
@@ -94,14 +94,15 @@ const Hero = () => {
                   </span>
                 )}
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Building modern web applications with passion and precision
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 {/* Download Button with Toast */}
                 <button
                   onClick={handleDownloadClick}
-                  className="px-8 py-3 bg-indigo-600 text-white shadow-xl hover:shadow-2xl rounded-lg hover:bg-indigo-700 transition flex items-center justify-center gap-2"
+                  className="px-8 py-3 bg-indigo-600 text-white shadow-xl hover:shadow-2xl rounded-lg hover:bg-indigo-700 hover:scale-105
+  transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <Download size={20} />
                   Download Resume
@@ -113,33 +114,36 @@ const Hero = () => {
                     href="https://github.com/ANONTO96"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-purple-300 rounded-full hover:bg-gray-200 transition dark:bg-gray-800 dark:hover:bg-gray-700"
+                    className="p-3  rounded-full hover:scale-110 
+  transition-all duration-300 bg-gray-800 hover:bg-gray-700"
                   >
                     <Github
                       size={24}
-                      className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition"
+                      className=" text-gray-400 hover:text-gray-300 transition"
                     />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/tanjir-ul-anonto/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-purple-300 rounded-full hover:bg-gray-200 transition dark:bg-gray-800 dark:hover:bg-gray-700"
+                    className="p-3 rounded-full hover:scale-110 
+  transition-all duration-300 bg-gray-800 hover:bg-gray-700"
                   >
                     <Linkedin
                       size={24}
-                      className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition"
+                      className=" text-gray-400 hover:text-gray-300 transition"
                     />
                   </a>
                   <a
                     href="https://www.facebook.com/tanjir.anonto/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-purple-300 rounded-full hover:bg-gray-200 transition dark:bg-gray-800 dark:hover:bg-gray-700"
+                    className="p-3 rounded-full hover:scale-110 
+  transition-all duration-300 bg-gray-800 hover:bg-gray-700"
                   >
                     <Facebook
                       size={24}
-                      className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition"
+                      className=" text-gray-400 hover:text-gray-300 transition"
                     />
                   </a>
                 </div>
@@ -148,7 +152,8 @@ const Hero = () => {
             <div className="md:w-1/2 my-9 sm:my-11 md:my-0">
               <img
                 src={image}
-                className="rounded-full w-64 h-64 sm:w-72 sm:h-72 object-cover mx-auto border-8 border-white shadow-xl hover:shadow-2xl dark:border-gray-700 transition"
+                className="rounded-full w-64 h-64 sm:w-72 sm:h-72 object-cover mx-auto border-8 border-white shadow-lg hover:shadow-2xl dark:border-gray-700 hover:scale-105
+  transition-all duration-300"
               />
             </div>
           </div>

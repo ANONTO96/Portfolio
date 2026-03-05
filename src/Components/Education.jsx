@@ -30,22 +30,22 @@ const Education = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-200">Education</h2>
-          <div className="mt-2 h-1 w-20 bg-purple-700 dark:bg-indigo-500 mx-auto"></div>
+          <div className="mt-2 h-1 w-20 bg-indigo-700 dark:bg-indigo-500 mx-auto"></div>
         </div>
 
         {/* Timeline Layout */}
-        <div className="relative border-l-4 border-purple-600 dark:border-indigo-400 ml-6">
+        <div className="relative border-l-4 border-indigo-600 dark:border-indigo-400 ml-6">
           {education.map((edu, index) => (
             <div key={index} className="mb-10 ml-6">
               {/* Icon */}
-              <div className="absolute -left-6 w-12 h-12 bg-purple-100 dark:bg-indigo-300 rounded-full flex items-center justify-center">
-                <GraduationCap size={24} className="text-purple-700 dark:text-indigo-800" />
+              <div className="absolute -left-6 w-12 h-12 bg-indigo-100 dark:bg-indigo-300 rounded-full flex items-center justify-center">
+                <GraduationCap size={24} className="text-indigo-700 dark:text-indigo-800" />
               </div>
 
               {/* Education Details */}
-              <div className="bg-gray-50 dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
+              <div className="bg-gray-50 hover:shadow-xl dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">{edu.degree}</h3>
-                <p className="text-purple-700 dark:text-indigo-400 font-medium">{edu.institution}</p>
+                <p className="text-indigo-700 dark:text-indigo-400 font-medium">{edu.institution}</p>
                 <p className="text-gray-500 dark:text-gray-400 mt-1">{edu.GPA}</p>
                 <p className="text-gray-500 dark:text-gray-400 mt-1">Year : {edu.year}</p>
                 <p className="text-gray-600 dark:text-gray-300 mt-2">{edu.description}</p>

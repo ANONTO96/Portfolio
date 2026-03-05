@@ -8,16 +8,16 @@ const About = () => {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-200">
             About Me
           </h2>
-          <div className="mt-2 h-1 w-20 bg-indigo-700 dark:bg-indigo-500 mx-auto"></div>
+          <div className="mt-2 h-1 w-20 bg-indigo-600 dark:bg-indigo-500 mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 mb-10">
           {/* Card 1 */}
           <div className="p-6 bg-gray-100 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
-            <div className="w-16 h-16 bg-purple-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Code2 size={32} className="text-purple-600 dark:text-indigo-300" />
+            <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Code2 size={32} className="text-indigo-600 dark:text-indigo-300" />
             </div>
-            <h3 className="text-xl text-purple-600 dark:text-indigo-300 font-semibold mb-2">
+            <h3 className="text-xl text-indigo-600 dark:text-indigo-300 font-semibold mb-2">
               Clean Code
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
@@ -27,10 +27,10 @@ const About = () => {
 
           {/* Card 2 */}
           <div className="p-6 bg-gray-100 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
-            <div className="w-16 h-16 bg-purple-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Coffee size={32} className="text-purple-600 dark:text-indigo-300" />
+            <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Coffee size={32} className="text-indigo-600 dark:text-indigo-300" />
             </div>
-            <h3 className="text-xl text-purple-600 dark:text-indigo-300 font-semibold mb-2">
+            <h3 className="text-xl text-indigo-600 dark:text-indigo-300 font-semibold mb-2">
               Problem Solver
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
@@ -40,10 +40,10 @@ const About = () => {
 
           {/* Card 3 */}
           <div className="p-6 bg-gray-100 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
-            <div className="w-16 h-16 bg-purple-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Palette size={32} className="text-purple-600 dark:text-indigo-300" />
+            <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Palette size={32} className="text-indigo-600 dark:text-indigo-300" />
             </div>
-            <h3 className="text-xl text-purple-600 dark:text-indigo-300 font-semibold mb-2">
+            <h3 className="text-xl text-indigo-600 dark:text-indigo-300 font-semibold mb-2">
               Creative Mind
             </h3>
             <p className="text-gray-600 dark:text-gray-300">

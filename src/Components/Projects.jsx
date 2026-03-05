@@ -98,7 +98,8 @@ const Projects = () => {
                     <ExternalLink size={16} />
                     Live Demo
                   </a>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200 transition">
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-800
+                   dark:text-gray-300 dark:hover:text-gray-200 transition">
                     <Github size={16} />
                     Code
                   </a>
