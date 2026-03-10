@@ -1,25 +1,11 @@
-import { useState, useLayoutEffect } from "react";
+import { useState } from "react";
+import { useTheme } from "../hooks/useTheme";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import portfolioIcon from "../assets/icons8-portfolio-48.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored) return stored === "dark"; // respect saved preference
-    return window.matchMedia("(prefers-color-scheme: dark)").matches; // default to dark if nothing is saved
-  });
-
-
-  useLayoutEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [darkMode]);
+  const { theme, toggleTheme } = useTheme();
 
 
   const navItems = [
@@ -58,10 +44,11 @@ const Navbar = () => {
 
             {/* Dark Mode Toggle (Desktop) */}
             <button
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={toggleTheme}
+
               className="p-2 rounded-lg hover:bg-gray-600 transition"
             >
-              {darkMode ? <Sun size={20} className="text-yellow-500" /> : <Moon size={20} className="text-white" />}
+              {theme === "dark" ? <Sun size={20} className="text-yellow-500" /> : <Moon size={20} className="text-white" />}
             </button>
           </div>
 
@@ -94,11 +81,12 @@ const Navbar = () => {
 
             {/* Dark Mode Toggle (Mobile) */}
             <button
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={toggleTheme}
+
               className="w-full flex justify-center items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
             >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-              {darkMode ? "Light Mode" : "Dark Mode"}
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {theme === "dark" ? "Light Mode" : "Dark Mode"}
             </button>
           </div>
         </div>
