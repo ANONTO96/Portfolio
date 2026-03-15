@@ -109,7 +109,7 @@ const Hero = () => {
                 </button>
 
                 {/* Social Links */}
-                <div className="flex gap-4 justify-center place-items-center">
+                <div className="flex gap-4 justify-center place-items-center my-4 sm:my-0">
                   <a
                     href="https://github.com/ANONTO96"
                     target="_blank"
@@ -149,7 +149,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 my-9 sm:my-11 md:my-0">
+            <div className="md:w-1/2 my-4 sm:my-11 md:my-0">
               <img
                 src={image}
                 className="rounded-full w-64 h-64 sm:w-72 sm:h-72 object-cover mx-auto border-8 border-white shadow-lg hover:shadow-2xl dark:border-gray-700 hover:scale-105

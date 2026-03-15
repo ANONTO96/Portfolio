@@ -24,7 +24,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img className="w-8 h-8 mb-1 mr-2 " src={portfolioIcon} alt="logo" />
-            <span className="text-2xl font-bold text-white
+            <span className="text-2xl font-bold text-white dark:text-indigo-300
  hover:text-indigo-300 align-middle">
               Portfolio
             </span>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-transparent dark:bg-gray-900 shadow-lg py-4">
+        <div className="md:hidden bg-transparent shadow-lg py-4">
           <div className="px-4 space-y-2">
             {navItems.map((item) => (
               <a
@@ -85,7 +85,7 @@ const Navbar = () => {
 
               className="w-full flex justify-center items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
             >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {theme === "dark" ? <Sun className="text-yellow-500" size={20} /> : <Moon className="text-black" size={20} />}
               {theme === "dark" ? "Light Mode" : "Dark Mode"}
             </button>
           </div>

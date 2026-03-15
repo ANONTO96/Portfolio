@@ -8,6 +8,7 @@ import Projects from "./Components/Projects"
 import Skills from "./Components/Skills"
 import 'animate.css';
 import { Toaster } from 'react-hot-toast';
+import SkillsMarquee from "./Components/SkillsMarquee"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <main >
           <Hero></Hero>
           <About></About>
+          <SkillsMarquee></SkillsMarquee>
           <Skills></Skills>
           <Education></Education>
           <Projects></Projects>

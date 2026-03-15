@@ -56,7 +56,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 transition">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900 transition">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white transition">Projects</h2>
@@ -68,7 +68,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-white dark:bg-gray-800 dark:hover:bg-mist-800 dark:text-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition h-full flex flex-col cursor-pointer"
+              className="dark:bg-gray-800 dark:hover:bg-mist-800 dark:text-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition h-full flex flex-col cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               {/* Image */}

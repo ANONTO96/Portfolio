@@ -58,7 +58,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="pt-20 bg-gray-50 dark:bg-gray-900">
+    <section id="skills" className="pt-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-200">Skills</h2>
@@ -73,7 +73,7 @@ const Skills = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {skills.technical.map((category, index) => (
-                <div key={index} className="bg-white hover:shadow-xl
+                <div key={index} className="bg-gray-50 hover:shadow-xl
                  transition-all dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
                   <div className="flex items-center gap-3 mb-4">
                     {category.icon}
@@ -99,7 +99,7 @@ const Skills = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {skills.soft.map((skill, index) => (
-                <div key={index} className="bg-white
+                <div key={index} className="bg-gray-50
                 hover:shadow-xl dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
                   <div className="flex items-center gap-3 mb-4">
                     {skill.icon}

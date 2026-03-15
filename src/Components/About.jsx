@@ -13,7 +13,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 mb-10">
           {/* Card 1 */}
-          <div className="p-6 bg-gray-100 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
             <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
               <Code2 size={32} className="text-indigo-600 dark:text-indigo-300" />
             </div>
@@ -26,7 +26,7 @@ const About = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="p-6 bg-gray-100 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
             <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
               <Coffee size={32} className="text-indigo-600 dark:text-indigo-300" />
             </div>
@@ -39,7 +39,7 @@ const About = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="p-6 bg-gray-100 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 dark:hover:bg-mist-800 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
             <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">
               <Palette size={32} className="text-indigo-600 dark:text-indigo-300" />
             </div>

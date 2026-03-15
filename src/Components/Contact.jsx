@@ -38,7 +38,7 @@ const Contact = () => {
   
 
   return (
-    <section id="contact" className="pt-20 bg-gray-50 dark:bg-gray-900">
+    <section id="contact" className="pt-20 bg-white dark:bg-gray-900">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -104,7 +104,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Your Name"
             required
-            className="w-full px-4 py-3 rounded-xl border text-gray-700 bg-gray-200 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
+            className="w-full px-4 py-3 rounded-xl border text-gray-700 bg-gray-200 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all"
           />
         </div>
 
@@ -120,7 +120,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Place Your Email Address"
             required
-            className="w-full px-4 py-3 rounded-xl border text-gray-700 bg-gray-200 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
+            className="w-full px-4 py-3 rounded-xl border text-gray-700 bg-gray-200 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all"
           />
         </div>
 
@@ -136,14 +136,16 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Let me know how I can help you."
             required
-            className="w-full px-4 py-3 rounded-xl border text-gray-700 bg-gray-200 border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all resize-none"
+            className="w-full px-4 py-3 rounded-xl border text-gray-700 bg-gray-200 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all resize-none"
           ></textarea>
         </div>
 
         <button
           type="button"
           onClick={handleSubmit}
-          className="w-full bg-indigo-600 text-white py-3 px-6 shadow-xl hover:shadow-2xl rounded-xl hover:bg-indigo-700 transition-colors duration-200 font-medium"
+          className="w-full bg-indigo-600 text-white py-3 px-6 shadow-xl hover:shadow-2xl rounded-xl hover:bg-indigo-700
+          hover:scale-105
+  transition-all duration-300 font-medium"
         >
           Send Message
         </button>
