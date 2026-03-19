@@ -68,7 +68,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="dark:bg-gray-800 dark:hover:bg-mist-800 dark:text-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition h-full flex flex-col cursor-pointer"
+              className="dark:bg-gray-800 dark:hover:bg-mist-800 dark:text-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 h-full flex flex-col cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               {/* Image */}

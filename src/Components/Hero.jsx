@@ -33,7 +33,7 @@ const Hero = () => {
           </span>
           <div className="flex gap-5">
             <button
-              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 hover:scale-105 transition-all duration-300"
               onClick={() => {
                 window.open(
                   'https://drive.google.com/file/d/1gMMRxYoWZRwJshtfjsB-iOrKeoAuerw6/view?usp=sharing',
@@ -45,10 +45,11 @@ const Hero = () => {
               CV
             </button>
             <button
-              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 hover:scale-105 transition-all duration-300"
               onClick={() => {
                 window.open(
-                  'https://drive.google.com/file/d/1YXMDP5iu_i_k1JezojpEnyahUMb0Pr0D/view?usp=sharing'
+                  'https://drive.google.com/file/d/1YXMDP5iu_i_k1JezojpEnyahUMb0Pr0D/view?usp=sharing',
+                  '_blank'
                 );
                 toast.dismiss(t.id);
               }}
@@ -101,7 +102,7 @@ const Hero = () => {
                 {/* Download Button with Toast */}
                 <button
                   onClick={handleDownloadClick}
-                  className="px-8 py-3 bg-indigo-600 text-white shadow-xl hover:shadow-2xl rounded-lg hover:bg-indigo-700 hover:scale-105
+                  className="px-8 py-3 bg-indigo-600 text-white shadow-xl hover:shadow-2xl rounded-lg hover:bg-indigo-700 hover:scale-104
   transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <Download size={20} />

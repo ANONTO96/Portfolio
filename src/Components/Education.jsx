@@ -43,7 +43,7 @@ const Education = () => {
               </div>
 
               {/* Education Details */}
-              <div className="bg-gray-50 hover:shadow-xl dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
+              <div className="bg-gray-50 hover:shadow-xl dark:bg-gray-800 dark:hover:bg-mist-800 hover:scale-101 transition-all duration-300 p-6 rounded-xl shadow-md ml-1">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">{edu.degree}</h3>
                 <p className="text-indigo-700 dark:text-indigo-400 font-medium">{edu.institution}</p>
                 <p className="text-gray-500 dark:text-gray-400 mt-1">{edu.GPA}</p>

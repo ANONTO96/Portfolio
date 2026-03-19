@@ -144,7 +144,7 @@ const Contact = () => {
           type="button"
           onClick={handleSubmit}
           className="w-full bg-indigo-600 text-white py-3 px-6 shadow-xl hover:shadow-2xl rounded-xl hover:bg-indigo-700
-          hover:scale-105
+          hover:scale-103
   transition-all duration-300 font-medium"
         >
           Send Message

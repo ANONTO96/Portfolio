@@ -71,10 +71,10 @@ const Skills = () => {
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-6 text-center">
               " Technical Skills "
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {skills.technical.map((category, index) => (
-                <div key={index} className="bg-gray-50 hover:shadow-xl
-                 transition-all dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
+                <div key={index} className="bg-gray-50 hover:shadow-xl hover:scale-102
+                 transition-all duration-300 dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
                   <div className="flex items-center gap-3 mb-4">
                     {category.icon}
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-200">{category.name}</h4>
@@ -100,7 +100,7 @@ const Skills = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {skills.soft.map((skill, index) => (
                 <div key={index} className="bg-gray-50
-                hover:shadow-xl dark:bg-gray-800 dark:hover:bg-mist-800 p-6 rounded-xl shadow-md">
+                hover:shadow-xl dark:bg-gray-800 dark:hover:bg-mist-800 hover:scale-102 transition-all duration-300 p-6 rounded-xl shadow-md">
                   <div className="flex items-center gap-3 mb-4">
                     {skill.icon}
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-200">{skill.name}</h4>
