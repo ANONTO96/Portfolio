@@ -1,149 +1,857 @@
-import { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
-import Project1 from '../assets/screenshot 2025-03-12 225948-cv_c4qnn.png';
-import Project2 from '../assets/romantic wedding moment-d9y_-534.jpeg';
-import Project3 from '../assets/colorful office supplies-cea_dey5.jpeg';
-import Project4 from '../assets/fashion-collection-design-shopping-graphic-words.jpg';
+import { useEffect, useState } from "react";
+import {
+  ArrowUpRight,
+  CheckCircle2,
+  Code2,
+  ExternalLink,
+  Github,
+  Layers3,
+  Sparkles,
+  X,
+  Zap,
+} from "lucide-react";
+
+import Project1 from "../assets/ScholarX.jpg";
+import Project2 from "../assets/Project-IO.jpg";
+import Project3 from "../assets/CS-Ticket-System.jpg";
+import Project4 from "../assets/Swift-Cart.jpg";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
-      title: "Restaurant Management System",
+      title: "ScholarX – AI-Powered Scholarship Guidance & Eligibility Analysis",
       image: Project1,
-      description: "Bistro Boss is a comprehensive restaurant management website built using the MERN stack (MongoDB, Express.js, React with Node.js...",
-      fullDescription: "Bistro Boss is a comprehensive restaurant management website built using the MERN stack (MongoDB, Express.js, React with Node.js, and Vite). This application aims to streamline restaurant operations, providing an intuitive interface for managing reservations, orders, menus, and staff.",
-      tech: ["React", "Node.js", "MongoDB", "Express", "Redux", "Socket.io"],
-      liveLink: "https://bistro-boss-c1e37.web.app/",
-      githubLink: "https://github.com/ANONTO96/Bistro-Boss-Restaurant",
-      challenges: "The platform offers secure user authentication using JWT, along with reservation, order, and menu management for seamless restaurant operations. Staff roles, schedules, and performance metrics are easily managed through a dynamic dashboard, enhancing the overall user experience.",
-      feature: "Ensuring secure authentication and smooth data management across reservations, orders, and staff schedules while providing real-time updates. Additionally, handling large amounts of data efficiently and maintaining performance while managing multiple user roles and dynamic content."
+      description:
+        "An AI-powered scholarship guidance platform that helps students discover relevant opportunities and analyze their eligibility based on academic, personal, and financial profiles.",
+      fullDescription:
+        "ScholarX is an AI-powered scholarship guidance and eligibility analysis system built to simplify the process of finding and evaluating scholarship opportunities. The platform combines a modern MERN-based web application with Python-powered processing to analyze student profiles against scholarship requirements. It provides explainable eligibility results, highlights passed, review, and failed requirements, identifies missing criteria, and helps students understand why they may or may not qualify for an opportunity.",
+      tech: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Python",
+        "Flask",
+        "MySQL",
+        "JWT",
+        "Tailwind CSS",
+        "DaisyUI",
+      ],
+      liveLink: "https://scholarx-web.vercel.app/",
+      githubLink:
+        "https://github.com/ANONTO96/ScholarX--Explainable-AI-based-Scholarship-Guidance-and-Eligibility-Analysis-System",
+      challenges:
+        "The main challenge was designing a flexible eligibility analysis engine capable of interpreting different scholarship requirements and comparing them against normalized student profile data. Handling different rule structures, mandatory and preferred requirements, academic thresholds, English-language scores, work experience, study destinations, and additional requirements required careful rule evaluation and data normalization.",
+      feature:
+        "ScholarX provides scholarship discovery, student profile analysis, explainable eligibility scoring, requirement-by-requirement status, missing criteria identification, scholarship details, personalized guidance, and an AI chatbot experience. The system evaluates multiple eligibility factors and presents the results as passed, review, or not eligible rather than simply returning a single score.",
     },
+
     {
-      title: "Connecting People for Shared Goals",
+      title: "Project IO – Web Development Project Showcase",
       image: Project2,
-      description: "Pair Promise is a platform designed to connect individuals with shared interests and goals, helping them build meaningful...",
-      fullDescription: "Pair Promise is a platform designed to connect individuals with shared interests and goals, helping them build meaningful connections and achieve mutual success.",
-      tech: ["React", "Axios", "MongoDB", "Recharts", "JWT", "React Helmet", "SweetAlert2", "Swiper"],
-      liveLink: "https://pair-promise.web.app/",
-      githubLink: "https://github.com/ANONTO96/Pair-Promise",
-      challenges: "Managing seamless integration between multiple libraries, handling sensitive data securely (e.g., API keys), and ensuring smooth user experience across devices and offline states while maintaining performance.",
-      feature: "The app leverages a range of libraries and tools, including Axios for API requests, Firebase for backend services, and Localforage for offline storage. React and related libraries enable dynamic UIs, navigation, and real-time feedback through features like toasts, charts, and customizable alerts."
+      description:
+        "A centralized project showcase platform designed to present web development projects, their technologies, descriptions, and details through a clean and responsive interface.",
+      fullDescription:
+        "Project IO is a portfolio-style web application created to organize and showcase web development projects in one place. Visitors can explore different applications, view detailed project information, understand the technologies used, and navigate between project pages through a clean and responsive interface. The platform demonstrates practical use of React, client-side routing, Tailwind CSS, DaisyUI, and reusable UI components.",
+      tech: [
+        "React",
+        "Vite",
+        "React Router DOM",
+        "Tailwind CSS",
+        "DaisyUI",
+        "React Icons",
+        "React Toastify",
+      ],
+      liveLink: "https://project-io-webapp.netlify.app/",
+      githubLink: "https://github.com/ANONTO96/Project-IO",
+      challenges:
+        "The key challenge was creating a consistent project presentation system that could handle different types of applications while keeping the interface responsive and easy to navigate. Organizing project information, building reusable components, implementing client-side routing, and maintaining a clean UI across different screen sizes were important parts of the development process.",
+      feature:
+        "The application provides a centralized collection of projects, detailed project views, technology-stack information, responsive layouts, smooth navigation between pages, and toast notifications for user interactions.",
     },
+
     {
-      title: "Assignment & Task Management System",
+      title: "CS Ticket – Customer Service Ticket Management System",
       image: Project3,
-      description: "Assign Hub is a modern web application designed to help users manage assignments and tasks efficiently...",
-      fullDescription: "Assign Hub is a modern web application designed to help users manage assignments and tasks efficiently. Built with React and Vite, the website offers a high-performance environment for developing React-based applications. It features fast development builds, live previews, and a user-friendly interface.",
-      tech: ["React", "Vite", "Localstorage", "React Router", "Firebase", "Dark-mode"],
-      liveLink: "https://assign-hub-9f6e7.web.app/",
-      githubLink: "https://github.com/ANONTO96/Assign-Hub",
-      challenges: "Managing data synchronization between online and offline states, ensuring smooth performance with multiple features, and handling secure user authentication and session management effectively.",
-      feature: "The application offers streamlined assignment management, real-time toast notifications, fast development with Vite, offline storage, seamless routing with React Router, and secure authentication using Firebase."
+      description:
+        "A responsive customer service ticket management application designed to organize support requests through a structured ticketing workflow.",
+      fullDescription:
+        "CS Ticket is a responsive customer service ticket management system built to demonstrate a practical support-request workflow. The application allows users to create and manage customer service tickets while presenting ticket information in an organized interface. It focuses on making support requests easier to track, understand, and manage through a clean dashboard-oriented experience.",
+      tech: [
+        "React",
+        "Vite",
+        "JavaScript",
+        "Tailwind CSS",
+        "DaisyUI",
+        "React Router",
+      ],
+      liveLink:
+        "https://customer-service-ticket-system-projct.netlify.app/",
+      githubLink: "https://github.com/ANONTO96/Ticket-System",
+      challenges:
+        "The main challenge was designing a clear ticket-management workflow while keeping the interface simple and responsive. Managing ticket states, presenting customer issues clearly, handling user interactions, and maintaining a consistent dashboard experience across devices required careful component and state organization.",
+      feature:
+        "The system provides a structured customer support workflow with ticket creation, ticket information management, status-based organization, interactive UI elements, and a responsive interface for handling customer service requests.",
     },
+
     {
       title: "SwiftCart – One-Stop Fashion & Clothing Solution",
       image: Project4,
-      description: "SwiftCart is a one-stop solution for fashion and clothing shops, offering a seamless platform for browsing, purchasing, and...",
-      fullDescription: "SwiftCart is a one-stop solution for fashion and clothing shops, offering a seamless platform for browsing, purchasing, and managing apparel. Store owners can showcase their collections, manage inventory, and track orders, while customers enjoy a smooth shopping experience with curated recommendations, secure payments, and order tracking. The app focuses on responsive design, fast performance, and intuitive UI to enhance user engagement.",
+      description:
+        "A one-stop fashion and clothing platform focused on browsing products, shopping interactions, and a responsive user experience.",
+      fullDescription:
+        "SwiftCart is a one-stop solution for fashion and clothing shops, offering a seamless platform for browsing, purchasing, and managing apparel. Store owners can showcase their collections, manage inventory, and track orders, while customers enjoy a smooth shopping experience with curated recommendations, secure payments, and order tracking. The app focuses on responsive design, fast performance, and intuitive UI to enhance user engagement.",
       tech: ["Vanilla JS", "DaisyUI", "TailwindCSS", "HTML"],
       liveLink: "https://swiftcart2026.netlify.app/",
       githubLink: "https://github.com/ANONTO96/swiftCart",
-      challenges: "Keeping the interface simple and responsive across devices. Ensuring secure data management while maintaining fast load times and smooth interactions, especially with a large product catalog.",
-      feature: "Users can browse products, add items to the cart, and complete basic checkout."
-    }
+      challenges:
+        "Keeping the interface simple and responsive across devices. Ensuring secure data management while maintaining fast load times and smooth interactions, especially with a large product catalog.",
+      feature:
+        "Users can browse products, add items to the cart, and complete basic checkout.",
+    },
   ];
 
+  // Close modal with Escape
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setSelectedProject(null);
+      }
+    };
+
+    if (selectedProject) {
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedProject]);
+
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900 transition">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white transition">Projects</h2>
-          <div className="mt-2 h-1 w-20 bg-indigo-500 mx-auto"></div>
+    <section
+      id="projects"
+      className="
+        relative overflow-hidden
+        bg-slate-50 pt-24
+        transition-colors duration-500
+        dark:bg-[#0b1220]
+      "
+    >
+      {/* Background decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="
+            absolute -left-32 top-24 h-72 w-72 rounded-full
+            bg-indigo-300/20 blur-3xl
+            dark:bg-indigo-500/10
+          "
+        />
+
+        <div
+          className="
+            absolute -right-32 bottom-20 h-80 w-80 rounded-full
+            bg-blue-300/20 blur-3xl
+            dark:bg-blue-500/10
+          "
+        />
+
+        <div
+          className="
+            absolute left-1/2 top-1/3 h-56 w-56
+            -translate-x-1/2 rounded-full
+            bg-violet-300/10 blur-3xl
+            dark:bg-violet-500/5
+          "
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        {/* =========================
+            SECTION HEADER
+        ========================== */}
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+
+          <div
+            className="
+              mb-4 inline-flex items-center gap-2
+                rounded-full border
+                border-indigo-100
+                hover:border-indigo-200
+                transition-all duration-300
+                bg-white/80
+                px-4 py-2
+                text-sm font-semibold
+                text-indigo-600
+                shadow-sm backdrop-blur-sm
+                dark:border-indigo-500/20
+                dark:bg-slate-900/60
+                dark:text-indigo-300
+                dark:hover:border-indigo-500/30
+                dark:hover:bg-indigo-500/10
+            "
+          >
+            <Sparkles size={15} />
+            Selected Work
+          </div>
+
+          <h2
+            className="
+              text-4xl font-extrabold tracking-tight
+              text-slate-900
+              sm:text-5xl
+              dark:text-white
+            "
+          >
+            Projects
+          </h2>
+
+          <div
+            className="
+              mx-auto mt-5 h-1 w-16 rounded-full
+              bg-linear-to-r from-blue-500 via-indigo-500 to-violet-500
+            "
+          />
+
+          <p
+            className="
+              mx-auto mt-6 max-w-2xl
+              text-base leading-7
+              text-slate-600
+              sm:text-lg
+              dark:text-slate-400
+            "
+          >
+            A selection of projects where I combine clean interfaces,
+            practical problem-solving, and modern web technologies.
+          </p>
         </div>
 
-        {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 mx-2 sm:mx-8 lg:w-[90%] 2xl:w-full lg:mx-auto 2xl:grid-cols-4 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="dark:bg-gray-800 dark:hover:bg-mist-800 dark:text-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 h-full flex flex-col cursor-pointer"
-              onClick={() => setSelectedProject(project)}
-            >
-              {/* Image */}
-              <img src={project.image} alt={project.title} className="w-full h-52 object-cover" />
+        {/* =========================
+            PROJECT GRID
+        ========================== */}
+        <div
+          className="
+            grid grid-cols-1 gap-7
+            md:grid-cols-2
+            lg:gap-12
+          "
+        >
+          {projects.map((project, index) => {
+            const isFeatured = index === 0;
 
-              {/* Details */}
-              <div className="px-6 pb-6 flex flex-col grow">
-                <h3 className="text-xl text-gray-700 dark:text-white font-semibold my-2 transition">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {project.description} 
-                  <span className="text-blue-500 cursor-pointer" onClick={() => setSelectedProject(project)}> More</span>
-                </p>
+            return (
+              <article
+                key={project.title}
+                className={`
+                  group relative flex h-full flex-col overflow-hidden
+                  rounded-3xl
+                  border
+                  bg-white/90
+                  shadow-sm
+                  backdrop-blur-sm
+                  transition-all duration-500
+                  hover:-translate-y-2
+                  hover:shadow-2xl
+                  dark:bg-slate-900/80
+                  
+                  ${
+                    isFeatured
+                      ? `
+                        border-indigo-200/80
+                        shadow-indigo-100/60
+                        dark:border-indigo-500/20
+                        dark:shadow-indigo-950/30
+                      `
+                      : `
+                        border-slate-200
+                        dark:border-slate-800
+                      `
+                  }
+                `}
+              >
+                {/* =========================
+                    IMAGE
+                ========================== */}
+                <div
+                  className={`
+                    relative overflow-hidden
+                    h-56
+                  `}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="
+                      h-full w-full object-cover
+                      transition duration-700
+                      group-hover:scale-105
+                    "
+                  />
 
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, i) => (
-                    <span key={i} className="px-3 py-1 bg-indigo-100 text-indigo-600 hover:bg-indigo-200 dark:bg-indigo-200 dark:hover:bg-indigo-100 dark:text-indigo-700 transition rounded-full text-sm">
-                      {tech}
-                    </span>
-                  ))}
+                  {/* Image gradient */}
+                  <div
+                    className="
+                      absolute inset-0
+                      bg-linear-to-t
+                      from-slate-950/70 via-slate-950/10 to-transparent
+                      opacity-70
+                    "
+                  />
+
+                  {/* Project number */}
+                  <div
+                    className="
+                      absolute left-5 top-5
+                      flex h-10 w-10 items-center justify-center
+                      rounded-xl
+                      border border-white/20
+                      bg-slate-950/50
+                      text-sm font-bold text-white
+                      shadow-lg backdrop-blur-md
+                    "
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  {/* Featured badge */}
+                  {isFeatured && (
+                    <div
+                      className="
+                        absolute right-5 top-5
+                        inline-flex items-center gap-2
+                        rounded-full
+                        border border-white/20
+                        bg-indigo-600/90
+                        px-3 py-1.5
+                        text-xs font-bold text-white
+                        shadow-lg backdrop-blur-md
+                      "
+                    >
+                      <Sparkles size={13} />
+                      Featured Project
+                    </div>
+                  )}
+
+                  {/* Hover action */}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedProject(project)}
+                    className="
+                      absolute bottom-5 right-5
+                      flex h-11 w-11
+                      translate-y-3 items-center justify-center
+                      rounded-full
+                      bg-white text-slate-900
+                      opacity-0 shadow-xl
+                      transition-all duration-300
+                      hover:bg-indigo-50
+                      group-hover:translate-y-0
+                      group-hover:opacity-100
+                    "
+                    aria-label={`View ${project.title}`}
+                  >
+                    <ArrowUpRight size={20} />
+                  </button>
                 </div>
 
-                {/* Links */}
-                <div className="flex gap-4 mt-auto">
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-indigo-600 
-                  hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300">
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-800
-                   dark:text-gray-300 dark:hover:text-gray-200 transition">
-                    <Github size={16} />
-                    Code
-                  </a>
+                {/* =========================
+                    CARD CONTENT
+                ========================== */}
+                <div className="flex flex-1 flex-col p-6">
+
+                  {/* Category */}
+                  <div
+                    className="
+                      mb-3 flex items-center gap-2
+                      text-xs font-bold uppercase tracking-[0.14em]
+                      text-indigo-500
+                      dark:text-indigo-400
+                    "
+                  >
+                    <Code2 size={14} />
+                    {index === 0
+                      ? "AI • Full Stack"
+                      : index === 1
+                      ? "Frontend • Web"
+                      : index === 2
+                      ? "Web Application"
+                      : "Frontend • E-Commerce"}
+                  </div>
+
+                  {/* Title */}
+                  <h3
+                    className={`
+                      font-bold leading-snug
+                      text-slate-900
+                      dark:text-white
+                      ${
+                        isFeatured
+                          ? "text-2xl"
+                          : "text-xl"
+                      }
+                    `}
+                  >
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    className="
+                      mt-3 line-clamp-3
+                      text-sm leading-6
+                      text-slate-600
+                      dark:text-slate-400
+                    "
+                  >
+                    {project.description}
+                  </p>
+
+                  {/* Technologies */}
+                  <div className="my-5 flex flex-wrap gap-2">
+                    {project.tech.map(
+                      (tech) => (
+                        <span
+                          key={tech}
+                          className="
+                            rounded-lg
+                            border border-slate-200
+                            bg-slate-50
+                            px-2.5 py-1
+                            text-xs font-medium
+                            text-slate-600
+                            transition
+                            group-hover:border-indigo-200
+                            group-hover:text-indigo-600
+                            dark:border-slate-700
+                            dark:bg-slate-800/70
+                            dark:text-slate-300
+                            dark:group-hover:border-indigo-500/30
+                            dark:group-hover:text-indigo-300
+                          "
+                        >
+                          {tech}
+                        </span>
+                      )
+                    )}
+
+                  </div>
+
+                  {/* Bottom Actions */}
+                  <div
+                    className="
+                      mt-auto flex items-center gap-3
+                      border-t border-slate-100
+                      pt-5
+                      dark:border-slate-800
+                    "
+                  >
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="
+                        inline-flex flex-1 items-center
+                        justify-center gap-2
+                        rounded-xl
+                        bg-linear-to-r
+                        from-indigo-600 to-blue-600
+                        px-4 py-2.5
+                        text-sm font-semibold text-white
+                        shadow-sm
+                        transition-all duration-300
+                        hover:-translate-y-0.5
+                        hover:shadow-lg
+                        hover:shadow-indigo-500/20
+                      "
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="
+                        inline-flex items-center justify-center
+                        gap-2
+                        rounded-xl
+                        border border-slate-200
+                        bg-white
+                        px-4 py-2.5
+                        text-sm font-semibold
+                        text-slate-700
+                        transition-all duration-300
+                        hover:-translate-y-0.5
+                        hover:border-indigo-200
+                        hover:text-indigo-600
+                        dark:border-slate-700
+                        dark:bg-slate-800/70
+                        dark:text-slate-200
+                        dark:hover:border-indigo-500/30
+                        dark:hover:text-indigo-300
+                      "
+                      aria-label={`View ${project.title} source code`}
+                    >
+                      <Github size={17} />
+                      <span className="hidden sm:inline">
+                        Code
+                      </span>
+                    </a>
+                  </div>
+
+                  {/* Case study button */}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedProject(project)}
+                    className="
+                      mt-3 flex w-full items-center
+                      justify-center gap-2
+                      rounded-xl
+                      px-4 py-2
+                      text-sm font-semibold
+                      text-slate-500
+                      transition
+                      hover:text-indigo-600
+                      dark:text-slate-400
+                      dark:hover:text-indigo-300
+                    "
+                  >
+                    View case study
+                    <ArrowUpRight size={15} />
+                  </button>
                 </div>
-              </div>
-            </div>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
 
-      {/* Modal */}
+      {/* =====================================================
+          PROJECT MODAL / CASE STUDY
+      ====================================================== */}
       {selectedProject && (
-        <div className="fixed inset-0 flex items-center justify-center">
-          <div className="bg-white dark:bg-gray-900 transition rounded-3xl shadow-lg p-6 max-w-lg w-full top-7 relative">
-            <button 
-              className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 text-xl"
+        <div
+          className="
+            fixed inset-0 z-100
+            flex items-center justify-center
+            bg-slate-950/70
+            p-4
+            backdrop-blur-md
+            sm:p-6
+          "
+          onMouseDown={() => setSelectedProject(null)}
+        >
+          <div
+            className="
+              relative
+              flex max-h-[92vh]
+              w-full max-w-4xl
+              flex-col overflow-hidden
+              rounded-3xl
+              border border-white/10
+              bg-white
+              shadow-2xl
+              dark:bg-[#111827]
+            "
+            onMouseDown={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              type="button"
               onClick={() => setSelectedProject(null)}
+              className="
+                absolute right-4 top-4 z-20
+                flex h-10 w-10 items-center justify-center
+                rounded-full
+                border border-white/20
+                bg-slate-950/60
+                text-white
+                shadow-lg
+                backdrop-blur-md
+                transition
+                hover:scale-105
+                hover:bg-slate-950/80
+              "
+              aria-label="Close project details"
             >
-              ✖
+              <X size={19} />
             </button>
-            <h3 className="text-2xl text-center text-gray-700 dark:text-gray-200 transition font-bold mb-4">{selectedProject.title}</h3>
-            <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-52 object-cover rounded-lg mb-4" />
-            <p className="text-gray-700 dark:text-gray-400 transition mb-4">{selectedProject.fullDescription}</p>
-            <p className="text-gray-800 dark:text-gray-200 font-semibold">Features:</p>
-            <p className="text-gray-700 dark:text-gray-400 transition mb-4">{selectedProject.feature}</p>
-            <p className="text-gray-800 dark:text-gray-200 transition font-semibold">Challenges:</p>
-            <p className="text-gray-700 dark:text-gray-400 transition mb-4">{selectedProject.challenges}</p>
-            
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {selectedProject.tech.map((tech, i) => (
-                <span key={i} className="px-3 py-1 bg-indigo-100 hover:bg-indigo-200 text-indigo-600 dark:bg-indigo-200 dark:text-indigo-700 dark:hover:bg-indigo-100 rounded-full text-sm transition">
-                  {tech}
-                </span>
-              ))}
+
+            {/* Modal Image */}
+            <div className="relative h-56 shrink-0 sm:h-72">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="h-full w-full object-cover"
+              />
+
+              <div
+                className="
+                  absolute inset-0
+                  bg-linear-to-t
+                  from-slate-950/90 via-slate-950/20 to-transparent
+                "
+              />
+
+              <div className="absolute bottom-6 left-6 right-16 sm:left-8 sm:bottom-8">
+                <div
+                  className="
+                    mb-3 inline-flex items-center gap-2
+                    rounded-full
+                    border border-white/20
+                    bg-white/10
+                    px-3 py-1.5
+                    text-xs font-semibold text-white
+                    backdrop-blur-md
+                  "
+                >
+                  <Layers3 size={13} />
+                  Project Case Study
+                </div>
+
+                <h3
+                  className="
+                    text-2xl font-extrabold
+                    leading-tight text-white
+                    sm:text-3xl
+                  "
+                >
+                  {selectedProject.title}
+                </h3>
+              </div>
             </div>
 
-            <div className="flex justify-end gap-4">
-              <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 transition">
-                <ExternalLink size={16} /> Live Demo
-              </a>
-              <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200 transition">
-                <Github size={16} /> Code
-              </a>
+            {/* Modal Body */}
+            <div className="overflow-y-auto">
+              <div className="p-6 sm:p-8">
+
+                {/* Description */}
+                <div className="mb-8">
+                  <div
+                    className="
+                      mb-3 flex items-center gap-2
+                      text-sm font-bold
+                      text-indigo-600
+                      dark:text-indigo-400
+                    "
+                  >
+                    <Sparkles size={16} />
+                    About the project
+                  </div>
+
+                  <p
+                    className="
+                      text-sm leading-7
+                      text-slate-600
+                      sm:text-base
+                      dark:text-slate-300
+                    "
+                  >
+                    {selectedProject.fullDescription}
+                  </p>
+                </div>
+
+                {/* Features + Challenges */}
+                <div className="grid gap-5 md:grid-cols-2">
+
+                  {/* Features */}
+                  <div
+                    className="
+                      rounded-2xl
+                      border border-slate-200
+                      bg-slate-50
+                      p-5
+                      dark:border-slate-800
+                      dark:bg-slate-900/70
+                    "
+                  >
+                    <div
+                      className="
+                        mb-3 flex items-center gap-2
+                        font-bold text-slate-900
+                        dark:text-white
+                      "
+                    >
+                      <span
+                        className="
+                          flex h-8 w-8 items-center justify-center
+                          rounded-lg
+                          bg-emerald-100
+                          text-emerald-600
+                          dark:bg-emerald-500/10
+                          dark:text-emerald-400
+                        "
+                      >
+                        <CheckCircle2 size={17} />
+                      </span>
+
+                      Key Features
+                    </div>
+
+                    <p
+                      className="
+                        text-sm leading-6
+                        text-slate-600
+                        dark:text-slate-400
+                      "
+                    >
+                      {selectedProject.feature}
+                    </p>
+                  </div>
+
+                  {/* Challenges */}
+                  <div
+                    className="
+                      rounded-2xl
+                      border border-slate-200
+                      bg-slate-50
+                      p-5
+                      dark:border-slate-800
+                      dark:bg-slate-900/70
+                    "
+                  >
+                    <div
+                      className="
+                        mb-3 flex items-center gap-2
+                        font-bold text-slate-900
+                        dark:text-white
+                      "
+                    >
+                      <span
+                        className="
+                          flex h-8 w-8 items-center justify-center
+                          rounded-lg
+                          bg-amber-100
+                          text-amber-600
+                          dark:bg-amber-500/10
+                          dark:text-amber-400
+                        "
+                      >
+                        <Zap size={17} />
+                      </span>
+
+                      Challenges
+                    </div>
+
+                    <p
+                      className="
+                        text-sm leading-6
+                        text-slate-600
+                        dark:text-slate-400
+                      "
+                    >
+                      {selectedProject.challenges}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div className="mt-8">
+                  <div
+                    className="
+                      mb-4 flex items-center gap-2
+                      text-sm font-bold
+                      text-slate-900
+                      dark:text-white
+                    "
+                  >
+                    <Code2 size={17} className="text-indigo-500" />
+                    Technologies Used
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="
+                          rounded-xl
+                          border border-indigo-100
+                          bg-indigo-50
+                          px-3 py-2
+                          text-xs font-semibold
+                          text-indigo-700
+                          dark:border-indigo-500/20
+                          dark:bg-indigo-500/10
+                          dark:text-indigo-300
+                        "
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Modal Actions */}
+                <div
+                  className="
+                    mt-8 flex flex-col gap-3
+                    border-t border-slate-200
+                    pt-6
+                    sm:flex-row sm:justify-end
+                    dark:border-slate-800
+                  "
+                >
+                  <a
+                    href={selectedProject.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      inline-flex items-center
+                      justify-center gap-2
+                      rounded-xl
+                      border border-slate-200
+                      bg-white
+                      px-5 py-3
+                      text-sm font-semibold
+                      text-slate-700
+                      transition
+                      hover:border-indigo-200
+                      hover:text-indigo-600
+                      dark:border-slate-700
+                      dark:bg-slate-800
+                      dark:text-slate-200
+                      dark:hover:border-indigo-500/30
+                      dark:hover:text-indigo-300
+                    "
+                  >
+                    <Github size={17} />
+                    View Source Code
+                  </a>
+
+                  <a
+                    href={selectedProject.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      inline-flex items-center
+                      justify-center gap-2
+                      rounded-xl
+                      bg-linear-to-r
+                      from-indigo-600 to-blue-600
+                      px-5 py-3
+                      text-sm font-semibold text-white
+                      shadow-lg
+                      shadow-indigo-500/20
+                      transition
+                      hover:-translate-y-0.5
+                      hover:shadow-xl
+                    "
+                  >
+                    <ExternalLink size={17} />
+                    Visit Live Project
+                    <ArrowUpRight size={15} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

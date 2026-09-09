@@ -30,7 +30,9 @@ const skills = [
 
 export default function SkillsMarquee() {
   return (
-    <div className="my-16 bg-white dark:bg-gray-900">
+    <div className="bg-slate-50
+        transition-colors duration-500
+        dark:bg-[#0b1220]">
       <Marquee
         speed={70}
         pauseOnHover
