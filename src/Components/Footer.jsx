@@ -201,33 +201,39 @@ const Footer = () => {
           </p>
 
           {/* Back to top */}
-          <a
-            href="#home"
-            aria-label="Back to top"
-            className="
-              group inline-flex items-center gap-2
-              rounded-xl
-              border border-slate-800
-              bg-slate-900/70
-              px-4 py-2.5
-              text-sm font-medium
-              text-slate-400
-              transition-all duration-300
-              hover:-translate-y-1
-              hover:border-indigo-500/30
-              hover:bg-indigo-500/10
-              hover:text-indigo-300
-            "
-          >
-            Back to top
-            <ArrowUp
-              size={16}
-              className="
-                transition-transform duration-300
-                group-hover:-translate-y-0.5
-              "
-            />
-          </a>
+<button
+  type="button"
+  onClick={() =>
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+  aria-label="Back to top"
+  className="
+    group inline-flex items-center gap-2
+    rounded-xl
+    border border-slate-800
+    bg-slate-900/70
+    px-4 py-2.5
+    text-sm font-medium
+    text-slate-400
+    transition-all duration-300
+    hover:-translate-y-1
+    hover:border-indigo-500/30
+    hover:bg-indigo-500/10
+    hover:text-indigo-300
+  "
+>
+  Back to top
+  <ArrowUp
+    size={16}
+    className="
+      transition-transform duration-300
+      group-hover:-translate-y-0.5
+    "
+  />
+</button>
         </div>
       </div>
     </footer>

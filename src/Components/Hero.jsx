@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import toast from "react-hot-toast";
 
-import image from "../assets/1000005139-removebg (1)-bv863erv.png";
+import image from "../assets/PXL_20250107_151727416~2.jpg";
 
 const Hero = () => {
   const [showDeveloper, setShowDeveloper] = useState(false);
@@ -216,7 +216,7 @@ const Hero = () => {
 {/* Globe Icon — lower left */}
 <div
   className="
-    absolute bottom-[25%] left-[15%]
+    absolute bottom-[30%] left-[15%]
     md:left-[25%]
     lg:bottom-[10%] lg:left-[40%]
     xl:left-[45%]
@@ -278,7 +278,7 @@ const Hero = () => {
               "
             >
               <Sparkles size={15} />
-              Full-Stack Web Developer
+              AI Driven Full-Stack Web Developer
             </div>
 
             {/* Heading */}

@@ -12,106 +12,180 @@ import {
 } from "lucide-react";
 
 import Project1 from "../assets/ScholarX.jpg";
-import Project2 from "../assets/Project-IO.jpg";
-import Project3 from "../assets/CS-Ticket-System.jpg";
-import Project4 from "../assets/Swift-Cart.jpg";
+import Project2 from "../assets/Medicare.jpg";
+import Project3 from "../assets/Project-IO.jpg";
+import Project4 from "../assets/Smart Office Equipment Dashboard.png";
+import Project5 from "../assets/CS-Ticket-System.jpg";
+import Project6 from "../assets/Swift-Cart.jpg";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects = [
-    {
-      title: "ScholarX – AI-Powered Scholarship Guidance & Eligibility Analysis",
-      image: Project1,
-      description:
-        "An AI-powered scholarship guidance platform that helps students discover relevant opportunities and analyze their eligibility based on academic, personal, and financial profiles.",
-      fullDescription:
-        "ScholarX is an AI-powered scholarship guidance and eligibility analysis system built to simplify the process of finding and evaluating scholarship opportunities. The platform combines a modern MERN-based web application with Python-powered processing to analyze student profiles against scholarship requirements. It provides explainable eligibility results, highlights passed, review, and failed requirements, identifies missing criteria, and helps students understand why they may or may not qualify for an opportunity.",
-      tech: [
-        "React",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Python",
-        "Flask",
-        "MySQL",
-        "JWT",
-        "Tailwind CSS",
-        "DaisyUI",
-      ],
-      liveLink: "https://scholarx-web.vercel.app/",
-      githubLink:
-        "https://github.com/ANONTO96/ScholarX--Explainable-AI-based-Scholarship-Guidance-and-Eligibility-Analysis-System",
-      challenges:
-        "The main challenge was designing a flexible eligibility analysis engine capable of interpreting different scholarship requirements and comparing them against normalized student profile data. Handling different rule structures, mandatory and preferred requirements, academic thresholds, English-language scores, work experience, study destinations, and additional requirements required careful rule evaluation and data normalization.",
-      feature:
-        "ScholarX provides scholarship discovery, student profile analysis, explainable eligibility scoring, requirement-by-requirement status, missing criteria identification, scholarship details, personalized guidance, and an AI chatbot experience. The system evaluates multiple eligibility factors and presents the results as passed, review, or not eligible rather than simply returning a single score.",
-    },
+  
+const projects = [
+  {
+    title: "ScholarX – AI-Powered Scholarship Guidance & Eligibility Analysis",
+    image: Project1,
+    category: "AI • Full Stack",
+  featured: true,
+    description:
+      "An AI-powered scholarship guidance platform that helps students discover relevant opportunities and analyze their eligibility based on academic, personal, and financial profiles.",
+    fullDescription:
+      "ScholarX is an AI-powered scholarship guidance and eligibility analysis system built to simplify the process of finding and evaluating scholarship opportunities. The platform combines a modern MERN-based web application with Python-powered processing to analyze student profiles against scholarship requirements. It provides explainable eligibility results, highlights passed, review, and failed requirements, identifies missing criteria, and helps students understand why they may or may not qualify for an opportunity.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "Flask",
+      "MySQL",
+      "JWT",
+      "Tailwind CSS",
+      "DaisyUI",
+    ],
+    liveLink: "https://scholarx-web.vercel.app/",
+    githubLink:
+      "https://github.com/ANONTO96/ScholarX--Explainable-AI-based-Scholarship-Guidance-and-Eligibility-Analysis-System",
+    challenges:
+      "The main challenge was designing a flexible eligibility analysis engine capable of interpreting different scholarship requirements and comparing them against normalized student profile data. Handling different rule structures, mandatory and preferred requirements, academic thresholds, English-language scores, work experience, study destinations, and additional requirements required careful rule evaluation and data normalization.",
+    feature:
+      "ScholarX provides scholarship discovery, student profile analysis, explainable eligibility scoring, requirement-by-requirement status, missing criteria identification, scholarship details, personalized guidance, and an AI chatbot experience. The system evaluates multiple eligibility factors and presents the results as passed, review, or not eligible rather than simply returning a single score.",
+  },
 
-    {
-      title: "Project IO – Web Development Project Showcase",
-      image: Project2,
-      description:
-        "A centralized project showcase platform designed to present web development projects, their technologies, descriptions, and details through a clean and responsive interface.",
-      fullDescription:
-        "Project IO is a portfolio-style web application created to organize and showcase web development projects in one place. Visitors can explore different applications, view detailed project information, understand the technologies used, and navigate between project pages through a clean and responsive interface. The platform demonstrates practical use of React, client-side routing, Tailwind CSS, DaisyUI, and reusable UI components.",
-      tech: [
-        "React",
-        "Vite",
-        "React Router DOM",
-        "Tailwind CSS",
-        "DaisyUI",
-        "React Icons",
-        "React Toastify",
-      ],
-      liveLink: "https://project-io-webapp.netlify.app/",
-      githubLink: "https://github.com/ANONTO96/Project-IO",
-      challenges:
-        "The key challenge was creating a consistent project presentation system that could handle different types of applications while keeping the interface responsive and easy to navigate. Organizing project information, building reusable components, implementing client-side routing, and maintaining a clean UI across different screen sizes were important parts of the development process.",
-      feature:
-        "The application provides a centralized collection of projects, detailed project views, technology-stack information, responsive layouts, smooth navigation between pages, and toast notifications for user interactions.",
-    },
+  {
+    title: "Medicare – Smart Doctor Appointment Booking System",
+    image: Project2,
+    category: "Healthcare • Web App",
+  featured: true,
+    description:
+      "A responsive doctor appointment booking platform that helps patients explore doctors by specialty, check available appointment slots, and manage bookings through a Firebase-powered system.",
+    fullDescription:
+      "Medicare is a doctor appointment booking web application built with React, Tailwind CSS, DaisyUI, and Firebase. It allows users to browse doctor profiles, explore medical specialties, view doctor details, and book appointments using available 30-minute time slots. Firebase Authentication supports user authentication, while Cloud Firestore stores appointment data. The application also includes appointment management functionality and an admin panel for managing appointments, providing a streamlined experience for patients and administrators.",
+    tech: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "React Router",
+    ],
+    liveLink:
+      "https://medicare-smart-doctor-appointment-web.netlify.app/",
+    githubLink:
+      "https://github.com/ANONTO96/MEDICARE-Smart-Doctor-Appointment-Management-System",
+    challenges:
+      "The main challenge was implementing a reliable appointment-booking workflow with doctor-specific schedules and 30-minute time slots. Integrating Firebase Authentication and Cloud Firestore, organizing appointment data, supporting appointment management, and building a responsive interface for patients and administrators required careful state management and data handling.",
+    feature:
+      "Medicare provides doctor profiles, specialty-based browsing, doctor detail pages, Firebase Authentication, appointment booking with available 30-minute slots, Firestore-based appointment storage, appointment cancellation and management, booking confirmation notifications, and an admin panel for managing appointments.",
+  },
 
-    {
-      title: "CS Ticket – Customer Service Ticket Management System",
-      image: Project3,
-      description:
-        "A responsive customer service ticket management application designed to organize support requests through a structured ticketing workflow.",
-      fullDescription:
-        "CS Ticket is a responsive customer service ticket management system built to demonstrate a practical support-request workflow. The application allows users to create and manage customer service tickets while presenting ticket information in an organized interface. It focuses on making support requests easier to track, understand, and manage through a clean dashboard-oriented experience.",
-      tech: [
-        "React",
-        "Vite",
-        "JavaScript",
-        "Tailwind CSS",
-        "DaisyUI",
-        "React Router",
-      ],
-      liveLink:
-        "https://customer-service-ticket-system-projct.netlify.app/",
-      githubLink: "https://github.com/ANONTO96/Ticket-System",
-      challenges:
-        "The main challenge was designing a clear ticket-management workflow while keeping the interface simple and responsive. Managing ticket states, presenting customer issues clearly, handling user interactions, and maintaining a consistent dashboard experience across devices required careful component and state organization.",
-      feature:
-        "The system provides a structured customer support workflow with ticket creation, ticket information management, status-based organization, interactive UI elements, and a responsive interface for handling customer service requests.",
-    },
+  {
+    title: "Project IO – Web Development Project Showcase",
+    image: Project3,
+    category: "Frontend • Web",
+  featured: true,
+    description:
+      "A centralized project showcase platform designed to present web development projects, their technologies, descriptions, and details through a clean and responsive interface.",
+    fullDescription:
+      "Project IO is a portfolio-style web application created to organize and showcase web development projects in one place. Visitors can explore different applications, view detailed project information, understand the technologies used, and navigate between project pages through a clean and responsive interface. The platform demonstrates practical use of React, client-side routing, Tailwind CSS, DaisyUI, and reusable UI components.",
+    tech: [
+      "React",
+      "Vite",
+      "React Router DOM",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React Icons",
+      "React Toastify",
+    ],
+    liveLink: "https://project-io-webapp.netlify.app/",
+    githubLink: "https://github.com/ANONTO96/Project-IO",
+    challenges:
+      "The key challenge was creating a consistent project presentation system that could handle different types of applications while keeping the interface responsive and easy to navigate. Organizing project information, building reusable components, implementing client-side routing, and maintaining a clean UI across different screen sizes were important parts of the development process.",
+    feature:
+      "The application provides a centralized collection of projects, detailed project views, technology-stack information, responsive layouts, smooth navigation between pages, and toast notifications for user interactions.",
+  },
 
-    {
-      title: "SwiftCart – One-Stop Fashion & Clothing Solution",
-      image: Project4,
-      description:
-        "A one-stop fashion and clothing platform focused on browsing products, shopping interactions, and a responsive user experience.",
-      fullDescription:
-        "SwiftCart is a one-stop solution for fashion and clothing shops, offering a seamless platform for browsing, purchasing, and managing apparel. Store owners can showcase their collections, manage inventory, and track orders, while customers enjoy a smooth shopping experience with curated recommendations, secure payments, and order tracking. The app focuses on responsive design, fast performance, and intuitive UI to enhance user engagement.",
-      tech: ["Vanilla JS", "DaisyUI", "TailwindCSS", "HTML"],
-      liveLink: "https://swiftcart2026.netlify.app/",
-      githubLink: "https://github.com/ANONTO96/swiftCart",
-      challenges:
-        "Keeping the interface simple and responsive across devices. Ensuring secure data management while maintaining fast load times and smooth interactions, especially with a large product catalog.",
-      feature:
-        "Users can browse products, add items to the cart, and complete basic checkout.",
-    },
-  ];
+  {
+    title: "Smart Office Device Management System – IUT Hackathon at Techathon Nationals & Rover Summit 2026",
+    image: Project4,
+    category: "IoT • Full Stack",
+  featured: false,
+    description:
+      "A real-time smart office monitoring and device management system that integrates a React dashboard, FastAPI backend, Discord bot, and ESP32-compatible IoT architecture to monitor and control office devices.",
+    fullDescription:
+      "Developed for the IUT CSE TechFest 2026 Hackathon, the Smart Office Device Management System simulates and monitors an office environment through a centralized FastAPI backend. It synchronizes device states across a React dashboard, a Discord bot, and ESP32-compatible IoT devices. The system monitors 18 smart devices across three rooms, including lights, fans, and doors. WebSocket communication delivers real-time updates, while runtime, power consumption, and daily energy usage are calculated from device activity. The Discord bot supports slash commands for monitoring and controlling devices, along with automatic after-hours alerts when devices remain switched on.",
+    tech: [
+      "React",
+      "Vite",
+      "Python",
+      "FastAPI",
+      "WebSockets",
+      "Pydantic",
+      "Uvicorn",
+      "Tailwind CSS",
+      "Axios",
+      "Discord.py",
+      "ESP32",
+      "Arduino",
+      "Wokwi",
+    ],
+    liveLink: "",
+    githubLink:
+      "https://github.com/ANONTO96/IUT-Hackathon-Preliminary-Smart-Office-Device-Management-System",
+    challenges:
+      "The main challenge was maintaining a consistent device state across multiple clients while supporting real-time monitoring and control. The centralized device state manager, WebSocket broadcasting, runtime and energy calculations, REST API integration, Discord bot communication, and ESP32-compatible device control needed to work together reliably without state inconsistencies.",
+    feature:
+      "The system features an interactive office floor layout, live device status monitoring, room-wise statistics, current power consumption, daily energy usage, REST API device control, real-time WebSocket updates, Discord slash commands, automatic after-hours alerts, and an ESP32-compatible IoT architecture with Wokwi simulation support.",
+  },
+
+  {
+    title: "CS Ticket – Customer Service Ticket Management System",
+    image: Project5,
+    category: "Web Application",
+  featured: false,
+    description:
+      "A responsive customer service ticket management application designed to organize support requests through a structured ticketing workflow.",
+    fullDescription:
+      "CS Ticket is a responsive customer service ticket management system built to demonstrate a practical support-request workflow. The application allows users to create and manage customer service tickets while presenting ticket information in an organized interface. It focuses on making support requests easier to track, understand, and manage through a clean dashboard-oriented experience.",
+    tech: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React Router",
+    ],
+    liveLink:
+      "https://customer-service-ticket-system-projct.netlify.app/",
+    githubLink: "https://github.com/ANONTO96/Ticket-System",
+    challenges:
+      "The main challenge was designing a clear ticket-management workflow while keeping the interface simple and responsive. Managing ticket states, presenting customer issues clearly, handling user interactions, and maintaining a consistent dashboard experience across devices required careful component and state organization.",
+    feature:
+      "The system provides a structured customer support workflow with ticket creation, ticket information management, status-based organization, interactive UI elements, and a responsive interface for handling customer service requests.",
+  },
+
+  {
+    title: "SwiftCart – One-Stop Fashion & Clothing Solution",
+    image: Project6,
+    category: "Frontend • E-Commerce",
+  featured: false,
+    description:
+      "A one-stop fashion and clothing platform focused on browsing products, shopping interactions, and a responsive user experience.",
+    fullDescription:
+      "SwiftCart is a one-stop solution for fashion and clothing shops, offering a seamless platform for browsing, purchasing, and managing apparel. Store owners can showcase their collections, manage inventory, and track orders, while customers enjoy a smooth shopping experience with curated recommendations, secure payments, and order tracking. The app focuses on responsive design, fast performance, and intuitive UI to enhance user engagement.",
+    tech: ["Vanilla JS", "DaisyUI", "TailwindCSS", "HTML"],
+    liveLink: "https://swiftcart2026.netlify.app/",
+    githubLink: "https://github.com/ANONTO96/swiftCart",
+    challenges:
+      "Keeping the interface simple and responsive across devices. Ensuring secure data management while maintaining fast load times and smooth interactions, especially with a large product catalog.",
+    feature:
+      "Users can browse products, add items to the cart, and complete basic checkout.",
+  },
+];
+
 
   // Close modal with Escape
   useEffect(() => {
@@ -237,13 +311,13 @@ const Projects = () => {
         ========================== */}
         <div
           className="
-            grid grid-cols-1 gap-7
+            grid grid-cols-1 gap-5
             md:grid-cols-2
-            lg:gap-12
+            lg:grid-cols-3
           "
         >
           {projects.map((project, index) => {
-            const isFeatured = index === 0;
+            const isFeatured = project.featured;
 
             return (
               <article
@@ -375,13 +449,7 @@ const Projects = () => {
                     "
                   >
                     <Code2 size={14} />
-                    {index === 0
-                      ? "AI • Full Stack"
-                      : index === 1
-                      ? "Frontend • Web"
-                      : index === 2
-                      ? "Web Application"
-                      : "Frontend • E-Commerce"}
+                    {project.category}
                   </div>
 
                   {/* Title */}

@@ -367,12 +367,12 @@ const Skills = () => {
                           transition-all duration-300
                           hover:border-indigo-100
                           hover:text-indigo-600
-                          dark:border-slate-700
+                          dark:border-slate-800
                           dark:bg-slate-800/70
                           dark:text-slate-300
                           dark:hover:border-indigo-500/20
                           dark:hover:text-indigo-300
-                          hover:-translate-y-0.5
+                          hover:-translate-y-1
                           hover:shadow-md
                         "
                       >

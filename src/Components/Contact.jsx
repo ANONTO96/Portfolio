@@ -493,13 +493,21 @@ const Contact = () => {
                       dark:bg-slate-800
                     "
                   >
-                    <span
-                      className="
-                        h-2.5 w-2.5 rounded-full
-                        bg-emerald-500
-                        shadow-[0_0_0_4px_rgba(16,185,129,0.12)]
-                      "
-                    />
+                    <span className="relative flex h-2.5 w-2.5">
+                <span
+                  className="
+                    absolute inline-flex h-full w-full
+                    animate-ping rounded-full
+                    bg-emerald-400 opacity-75
+                  "
+                />
+                <span
+                  className="
+                    relative inline-flex h-2.5 w-2.5
+                    rounded-full bg-emerald-500
+                  "
+                />
+              </span>
                   </div>
 
                   <div>

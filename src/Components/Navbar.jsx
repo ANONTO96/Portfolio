@@ -73,7 +73,7 @@ dark:text-white
                 group-hover:text-indigo-500
               "
             >
-              Portfolio
+              Tanjir Ul Islam
             </span>
           </a>
 

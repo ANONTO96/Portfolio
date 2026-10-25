@@ -9,6 +9,7 @@ import Skills from "./Components/Skills"
 import 'animate.css';
 import { Toaster } from 'react-hot-toast';
 import SkillsMarquee from "./Components/SkillsMarquee"
+import FloatingContact from "./Components/FloatingContact"
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         </main>
         <Footer></Footer>
       </div>
+      <FloatingContact></FloatingContact>
     </>
   )
 }
